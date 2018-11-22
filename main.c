@@ -5,17 +5,23 @@
 
 int main(int argc, char *argv[]) {
 	
-	char src[100] = "programming course";
-	int i=0;
+	FILE *fp;
+	char input[100];
+	int i;
 	
-	while(src[i] !='\0')
+	fp = fopen("sample.txt", "w");
+	
+	for (i=0; i<3; i++)
 	{
-		i++;	
+		printf("input a word :");
+		scanf("%s", input);
+		fprintf(fp, "%s\n", input);
 	}
-	//dst[i] = '\0';
+	//sookmyung
+	//Electronics
+	//programming
 	
-	printf("%s(%i)\n",src,i);
-	printf("%i", strlen(src));
+	fclose(fp);
 	 
 	return 0;
 }
