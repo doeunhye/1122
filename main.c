@@ -6,17 +6,16 @@
 int main(int argc, char *argv[]) {
 	
 	char src[100] = "programming course";
-	char dst[100];
-	int i;
+	int i=0;
 	
-	for(i=0; src[i] != '\0';i++){
-	
-		dst[i] = src[i];
-		
+	while(src[i] !='\0')
+	{
+		i++;	
 	}
-	dst[i] = '\0';
+	//dst[i] = '\0';
 	
-	printf("%s\n",dst);
+	printf("%s(%i)\n",src,i);
+	printf("%i", strlen(src));
 	 
 	return 0;
 }
