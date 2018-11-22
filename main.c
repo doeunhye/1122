@@ -5,22 +5,18 @@
 
 int main(int argc, char *argv[]) {
 	
-	FILE *fp;
-	char input[100];
+	FILE *fp = NULL;
+	char input;
 	int i;
 	
-	fp = fopen("sample.txt", "w");
 	
-	for (i=0; i<3; i++)
+	
+	fp = fopen("sample.txt", "r");
+	//printf("fp:%i\n", fp);
+	while((input=fgetc(fp)) != EOF)
 	{
-		printf("input a word :");
-		scanf("%s", input);
-		fprintf(fp, "%s\n", input);
+		putchar (input);
 	}
-	//sookmyung
-	//Electronics
-	//programming
-	
 	fclose(fp);
 	 
 	return 0;
